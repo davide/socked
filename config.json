@@ -1,0 +1,33 @@
+{
+  "VERSION": "0.1",
+  "quiet": false,
+  "JSHINT_OPTS": {
+    "bitwise": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "immed": true,
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "nonew": true,
+    "plusplus": true,
+    "regexp": true,
+    "undef": true,
+    "strict": true,
+    "trailing": true,
+    "asi": true
+  },
+  "JAVASCRIPT": {
+    "DIST_DIR": "www/javascript",
+    "socked": [
+      "src/client/sockedStart.js",
+      "src/client/logger.js",
+      "src/client/channelRef.js",
+      "src/client/channel.js",
+      "src/client/sockjs/connection.js",
+      "src/client/transport.js",
+      "src/client/sockedEnd.js"
+    ]
+  }
+}
