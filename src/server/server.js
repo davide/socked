@@ -84,7 +84,7 @@ var broadcastHandler = {
 		} else if (op == 'us') {
 			var role = data.shift();
 			conn.role = role;
-			var interests = data.shift();
+			var interests = data.shift() || null;
 			conn.interests = interests;
 			// console.log("update: ", role, interests)
 		} else if (op == 'm') {
