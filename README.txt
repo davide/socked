@@ -18,10 +18,8 @@ sudo apt-get install nodejs
 == Install sockjs and express.js
 
 # https://github.com/sockjs/sockjs-node
-npm install sockjs
-
 # http://expressjs.com/guide.html
-npm install express
+npm install
 
 == Install smoosh globally
 npm install smoosh -g
