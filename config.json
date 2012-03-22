@@ -19,15 +19,15 @@
     "asi": true
   },
   "JAVASCRIPT": {
-    "DIST_DIR": "www/javascript",
+    "DIST_DIR": "dist",
     "socked": [
-      "src/client/sockedStart.js",
-      "src/client/logger.js",
-      "src/client/channelRef.js",
-      "src/client/channel.js",
-      "src/client/sockjs/connection.js",
-      "src/client/transport.js",
-      "src/client/sockedEnd.js"
+      "src/sockedStart.js",
+      "src/logger.js",
+      "src/channelRef.js",
+      "src/channel.js",
+      "src/sockjs/connection.js",
+      "src/transport.js",
+      "src/sockedEnd.js"
     ]
   }
 }

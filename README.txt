@@ -1,7 +1,23 @@
+/***************************************************************
+* Socked
+***************************************************************/
+
+Socked is a persistent connection library for the web that
+gives you 'Connections' and 'Channels' to use as abstractions
+while creating your apps.
+
+To reduce traffic to an absolute minimum in channel subscriptions
+it is also possible to set the client's role (sender|receiver|both)
+and provide an array of 'interests' that should be used by a Socked
+compatible server to filter the channel messages.
+
+The communication mechanism is/will be pluggable. At this point
+Socked uses the SockJS library (which includes cross-domain support).
 
 /***************************************************************
-* Install nodejs
+* Development Dependencies
 ***************************************************************/
+
 == Linux
 sudo apt-get install python-software-properties
 sudo add-apt-repository ppa:chris-lea/node.js
@@ -11,15 +27,6 @@ sudo apt-get install nodejs
 == Windows
 # Install node.js and package manager
 # http://nodejs.org/#download
-
-/***************************************************************
-* Install Dependencies
-***************************************************************/
-== Install sockjs and express.js
-
-# https://github.com/sockjs/sockjs-node
-# http://expressjs.com/guide.html
-npm install
 
 == Install smoosh globally
 npm install smoosh -g
@@ -31,25 +38,10 @@ npm install smoosh -g
 == Linux
 # This command will monitor your changes and
 # smoosh (jslint/package/mnify) the files:
-./socked.sh
+./sockit.sh
 
 == Windows
 smoosh ./config.json
 
-/***************************************************************
-* SEE IT IN ACTION
-***************************************************************/
-== Startup server
-./server.sh
-
-# Open http://localhost:8080/ to check if everything is working.
-# The output is normally printed to the the dev console.
-
-# Connection + messages:
-  - http://localhost:8080/index.html
-# Filtering messages (a.k.a. interests):
-  - http://localhost:8080/interests.html
-# Mouse tracking:
-  - http://localhost:8080/mouselive/sender.html
-  - http://localhost:8080/mouselive/receiver.html
+The build output will be located under the dist folder.
 
