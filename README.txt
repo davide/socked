@@ -45,3 +45,11 @@ smoosh ./config.json
 
 The build output will be located under the dist folder.
 
+/***************************************************************
+* Examples
+***************************************************************/
+
+Browse the example pages here: http://davide.github.com/socked/
+All that code live on the gh-pages branch.
+
+
