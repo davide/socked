@@ -38,7 +38,7 @@ npm install smoosh -g
 == Linux
 # This command will monitor your changes and
 # smoosh (jslint/package/mnify) the files:
-./sockit.sh
+./build.sh
 
 == Windows
 smoosh ./config.json
