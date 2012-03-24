@@ -19,7 +19,7 @@
     "asi": true
   },
   "JAVASCRIPT": {
-    "DIST_DIR": "dist",
+    "DIST_DIR": "releases",
     "socked": [
       "src/sockedStart.js",
       "src/logger.js",
