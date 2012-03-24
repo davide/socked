@@ -1,21 +1,21 @@
 module('Channel',{
 	setup: function (){
-		
-		
+		//TODO: testChannel should be initialized at each test
+
 	},
 	tearDown: function(){
 
 	}
 });
 
-test('Subscribe "work" interest on "myConnection" channel', function(){
+test('Subscribe "work" interest on "myChannel" channel with role receiver', function(){
 		expect(4);
 
-	    mockConn = {
+	    var mockConn = {
 
-	    	/*there's no way to test connection without a subscription. Is this an hint for refactor?*/
+			/*there's no way to test connection without a subscription. Is this an hint for refactor?*/
 			connectToChannel: function(name){
-				equal('myConnection', name, 'it should connect to channel "myConnection"');
+				equal('myChannel', name, 'it should connect to channel "myChannel"');
 			},
 
 			updateChannelSubscription: function(name, channelRole, channelInterests){
@@ -25,6 +25,29 @@ test('Subscribe "work" interest on "myConnection" channel', function(){
 			}
 		};
 
-		testChannel = new Socked.Channel({name:'myConnection'}, mockConn);
+		var testChannel = new Socked.Channel({name:'myChannel'}, mockConn);
+		
 		testChannel.subscribe({role:'receiver', interests:['work']});
 	});
+
+test('Send message with role "receiver"', function(){
+		expect(1);
+
+		var wasSent = false;
+
+		var mockConn = {
+			connectToChannel: function(name){},
+			updateChannelSubscription: function(name, channelRole, channelInterests){},
+			sendToChannel: function(name, message){
+				wasSent = true;
+			}
+
+		};
+
+		var testChannel = new Socked.Channel({name:'myChannel'}, mockConn);
+		var channelRef = testChannel.subscribe({role:'receiver', interests:['work']});
+		
+		channelRef.send('yada yada');
+
+		equal(false, wasSent, 'It should not send message through the connection');
+});
