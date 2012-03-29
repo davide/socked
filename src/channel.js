@@ -34,6 +34,10 @@
 		var DEFAULT_CHANNEL_ROLE = "sender";
 		var channelRole = DEFAULT_CHANNEL_ROLE;
 
+		this.inspectChannelRole = function() {
+			return channelRole;
+		};
+
 		var updateRolesCount = function (role, countUpdater) {
 			if (role !== "sender") {
 				numReceivers = countUpdater(numReceivers);
@@ -64,6 +68,10 @@
 		var allInterestsCount = 0;
 		var channelInterestsCounts = {};
 		var channelInterests = null;
+
+		this.inspectChannelInterests = function() {
+			return channelInterests;
+		};
 
 		var updateInterestsCount = function (interests, countUpdater) {
 			if (interests === null) {
