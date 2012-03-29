@@ -18,6 +18,7 @@
 		};
 
 		var subscribeWithRef = function (ref, options) {
+			options = options || {role:'receiver', interests:null};
 			ref.options = options;
 			if (channelRefs.length === 0) {
 				connect();
